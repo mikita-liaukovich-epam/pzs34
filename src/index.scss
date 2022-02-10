@@ -1,0 +1,51 @@
+@import './variables.scss';
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+#root {
+  height: 100%;
+}
+
+html {
+  min-width: 300px;
+  min-height: 600px;
+}
+
+body {
+  background-color: $color-body;
+  height: 100vh;
+  color: $color-text-dark;
+  overflow: hidden;
+
+  &.dark-theme {
+    background-color: $color-body-dark;
+    color: $color-text-light;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.notification {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+
+  img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+  }
+}
